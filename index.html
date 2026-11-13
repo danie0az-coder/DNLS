@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Baldo &amp; Della Mea Advocacia — Direito Bancário e Superendividamento</title>
-<meta name="description" content="Escritório especializado em Direito Bancário e Superendividamento. Revisão de juros abusivos, redução de dívidas de CPF e CNPJ. Atendimento online em todo o Brasil. OAB/PR 124.188.">
+<title>Vértice Advocacia — Direito Bancário e Superendividamento | Modelo</title>
+<meta name="description" content="Escritório especializado em Direito Bancário e Superendividamento. Modelo de demonstração.">
 <style>
 /* Skip artifact shell — fixed styles served beside every artifact.
    Tokens, utilities and components (basecoat 1.0 markup, no CDN); artifacts
@@ -1204,16 +1204,16 @@ font-size: 13px; font-weight: 600; letter-spacing: 0.5px; flex-shrink: 0;
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-name { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: var(--text); }
 .brand-sub { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-secondary); margin-top: 3px; }
-.footer-logo-wrap {
-display: inline-block; background: #FFFFFF; border-radius: 12px; padding: 14px 18px;
+.site-badge {
+position: fixed; left: 22px; bottom: 22px; z-index: 90; font-size: 11px; color: var(--text-secondary);
+padding: 6px 12px; border-radius: 999px; letter-spacing: 0.08em; background: var(--glass-bg); border: 1px solid var(--border);
+backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
 }
-.footer-logo { height: 96px; width: auto; object-fit: contain; display: block; }
-.splash-logo-full {
-position: absolute; height: 160px; width: auto; object-fit: contain; display: block;
-opacity: 0; transform: scale(0.96); animation: logoIn 0.6s ease-out 1.5s forwards;
-}
-@keyframes logoIn { to { opacity: 1; transform: scale(1); } }
-@media (max-width: 768px) { .splash-logo-full { height: 110px; } }
+.splash-brand { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 8px; top: calc(50% + 110px); left: 50%; transform: translateX(-50%); }
+.splash-rule { display: block; width: 0; height: 1px; background: var(--splash-ink); opacity: 0.4; animation: ruleGrow 0.6s ease-out 2.2s forwards; }
+.splash-name { font-size: 22px; font-weight: 400; letter-spacing: 6px; color: var(--splash-ink); opacity: 0; animation: fadeIn 0.6s ease-out 2.4s forwards; }
+.splash-sub-l { font-size: 9px; letter-spacing: 0.18em; color: #6E6E73; opacity: 0; animation: fadeIn 0.6s ease-out 2.7s forwards; }
+@keyframes ruleGrow { to { width: 120px; } }
 .check-line { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 15px; color: var(--text-secondary); margin-top: 18px; }
 .check-line svg { width: 16px; height: 16px; stroke: var(--success); stroke-width: 2; fill: none; flex-shrink: 0; }
 .discreet { font-size: 12px; color: var(--text-secondary); margin-left: 8px; font-weight: 400; }
@@ -1280,7 +1280,13 @@ background: linear-gradient(var(--bg), var(--bg)) padding-box, linear-gradient(1
 backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%);
 box-shadow: 0 8px 32px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.6);
 }
-.photo-glass img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 8%; display: block; }
+.photo-placeholder {
+width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+background: linear-gradient(145deg, rgba(120,150,190,0.35), rgba(150,160,175,0.18) 55%, rgba(120,130,145,0.28));
+color: var(--text-secondary);
+}
+.photo-placeholder svg { width: 72px; height: 72px; stroke: var(--text-secondary); stroke-width: 0.8; fill: none; }
+.photo-placeholder span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.22em; }
 .photo-glass::after {
 content: ""; position: absolute; inset: auto 0 0 0; height: 40%; pointer-events: none;
 background: linear-gradient(to top, var(--bg), rgba(0,0,0,0));
@@ -1328,7 +1334,6 @@ color: var(--accent-text); background: var(--bg-secondary); margin-bottom: 20px;
 .about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 40px; align-items: start; }
 .about-card { padding: 44px; }
 .portrait-photo { aspect-ratio: 4/5; border-radius: 24px; overflow: hidden; width: 100%; }
-.portrait-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .portrait {
 aspect-ratio: 4/5; border-radius: 20px; border: 1px solid var(--border);
 background: linear-gradient(145deg, rgba(0,113,227,0.12), rgba(128,128,140,0.08));
@@ -1469,8 +1474,12 @@ html { scroll-behavior: auto; }
 <body class="loading">
 
 <div id="splash" aria-hidden="true">
-<div class="splash-box"><span>B&amp;DM</span></div>
-<img src="logomarca.jpg" alt="" class="splash-logo-full">
+<div class="splash-box"><span>VA</span></div>
+<div class="splash-brand">
+<span class="splash-rule"></span>
+<span class="splash-name">VÉRTICE</span>
+<span class="splash-sub-l">ADVOCACIA</span>
+</div>
 </div>
 
 <div class="aurora" aria-hidden="true">
@@ -1481,14 +1490,14 @@ html { scroll-behavior: auto; }
 
 <header class="navbar">
 <nav class="nav-inner" aria-label="Navegação principal">
-<a href="#inicio" class="brand-lockup" aria-label="Baldo &amp; Della Mea Advocacia"><span class="brand-symbol" aria-hidden="true">B&amp;DM</span><span class="brand-text"><span class="brand-name">Baldo &amp; Della Mea</span><span class="brand-sub">Advocacia</span></span></a>
+<a href="#inicio" class="brand-lockup" aria-label="Vértice Advocacia"><span class="brand-symbol" aria-hidden="true">VA</span><span class="brand-text"><span class="brand-name">Vértice Advocacia</span><span class="brand-sub">Advocacia</span></span></a>
 <ul class="nav-links">
 <li><a href="#areas">Áreas de Atuação</a></li>
 <li><a href="#escritorio">O Escritório</a></li>
 <li><a href="#resultados">Resultados</a></li>
 <li><a href="#duvidas">Dúvidas</a></li>
 </ul>
-<a class="nav-cta" href="https://wa.me/5541996632242" target="_blank" rel="noopener">Falar no WhatsApp</a>
+<a class="nav-cta" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Falar no WhatsApp</a>
 <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
 </button>
@@ -1500,7 +1509,7 @@ html { scroll-behavior: auto; }
 <a href="#escritorio">O Escritório</a>
 <a href="#resultados">Resultados</a>
 <a href="#duvidas">Dúvidas</a>
-<a class="nav-cta" href="https://wa.me/5541996632242" target="_blank" rel="noopener" style="text-align:center">Falar no WhatsApp</a>
+<a class="nav-cta" href="https://wa.me/5500000000000" target="_blank" rel="noopener" style="text-align:center">Falar no WhatsApp</a>
 </div>
 
 <main>
@@ -1508,8 +1517,11 @@ html { scroll-behavior: auto; }
 <section class="hero" id="inicio">
 <div class="hero-grid">
 <div class="hero-media reveal">
-<div class="photo-glass skeleton" id="heroPhoto">
-<img src="fotocapa.jpg" alt="Dra. Sandy Souza Baldo, advogada, em retrato profissional">
+<div class="photo-glass skeleton" id="heroPhoto" role="img" aria-label="Espaço para foto institucional">
+<div class="photo-placeholder">
+<svg viewBox="0 0 64 64" aria-hidden="true"><line x1="32" y1="8" x2="32" y2="54"/><line x1="16" y1="16" x2="48" y2="16"/><line x1="24" y1="54" x2="40" y2="54"/><path d="M16 16L10 36h12z"/><path d="M48 16l-6 20h12z"/><path d="M4 36a6 6 0 0 0 12 0"/><path d="M48 36a6 6 0 0 0 12 0"/></svg>
+<span>Espaço para foto institucional</span>
+</div>
 </div>
 </div>
 <div class="hero-text reveal">
@@ -1517,12 +1529,12 @@ html { scroll-behavior: auto; }
 <h1>Sua dívida não é definitiva.<span class="line2">É negociável — com método, base legal e estratégia.</span></h1>
 <p class="hero-sub">Escritório especializado em Direito Bancário e Superendividamento. Revisão de juros abusivos, renegociação e reestruturação de dívidas de CPF e CNPJ. Atendimento 100% online, em todo o Brasil.</p>
 <div class="hero-actions">
-<a class="btn-primary shine-btn" id="ctaWa" href="https://wa.me/5541996632242" target="_blank" rel="noopener"><span class="btn-label">Análise do meu caso</span></a>
+<a class="btn-primary shine-btn" id="ctaWa" href="https://wa.me/5500000000000" target="_blank" rel="noopener"><span class="btn-label">Análise do meu caso</span></a>
 <a class="btn-text" href="#escritorio">Conhecer o escritório ↓</a>
 </div>
 <p class="check-line"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>A análise inicial do seu caso é gratuita.</p>
 <div class="credibility glass">
-<span>OAB/PR 124.188</span>
+<span>OAB/UF 00.000</span>
 <span>+160 avaliações no Google</span>
 <span>Atendimento em todo o Brasil</span>
 </div>
@@ -1582,32 +1594,31 @@ html { scroll-behavior: auto; }
 <section id="escritorio">
 <div class="container">
 <div class="section-head reveal">
-<span class="eyebrow-pill">O Escritório</span>
+<span class="eyebrow-pill">A Advogada</span>
 <h2 class="section-title">Uma advogada, uma leitura técnica do seu caso.</h2>
 <p class="section-sub">Sociedade individual com atendimento direto e acompanhamento de cada etapa.</p>
 </div>
 <div class="glass about-card about-grid reveal">
 <div>
-<!-- substituir por foto real -->
-<div class="portrait-photo"><img src="sandy.jpg" alt="Dra. Sandy Souza Baldo em seu escritório"></div>
-<h3 class="about-name">Dra. Sandy Souza Baldo</h3>
-<p class="about-role">OAB/PR 124.188 · Sócia-fundadora</p>
+<div class="portrait-photo glass-card photo-glass" role="img" aria-label="Espaço para foto do escritório"><div class="photo-placeholder"><svg viewBox="0 0 64 64" aria-hidden="true"><line x1="32" y1="8" x2="32" y2="54"/><line x1="16" y1="16" x2="48" y2="16"/><line x1="24" y1="54" x2="40" y2="54"/><path d="M16 16L10 36h12z"/><path d="M48 16l-6 20h12z"/><path d="M4 36a6 6 0 0 0 12 0"/><path d="M48 36a6 6 0 0 0 12 0"/></svg><span>Espaço para foto do escritório</span></div></div>
+<h3 class="about-name">Dra. Nome da Advogada</h3>
+<p class="about-role">OAB/UF 00.000 · Sócia-fundadora</p>
 </div>
 <div class="about-body">
-<p>Advogada inscrita na OAB/PR sob o nº 124.188, com atuação voltada ao Direito Bancário e ao Superendividamento.</p>
-<p>Graduada em Direito, com pós-graduação em Direito Tributário e especialização em Direito Bancário. Cursa Ciências Contábeis, o que sustenta uma leitura técnica do endividamento: além do aspecto jurídico, a análise considera a estrutura real do orçamento e do fluxo de caixa do cliente.</p>
+<p>Advogada inscrita na OAB, com atuação voltada ao Direito Bancário e ao Superendividamento.</p>
+<p>Graduada em Direito, com pós-graduação em Direito Tributário e especialização em Direito Bancário. Formação complementar em Ciências Contábeis, o que sustenta uma leitura técnica do endividamento: além do aspecto jurídico, a análise considera a estrutura real do orçamento e do fluxo de caixa do cliente.</p>
 <p>Atua em negociações extrajudiciais, repactuação judicial de dívidas e ações de revisão de contratos de empréstimo, cartão de crédito e financiamentos com cláusulas abusivas.</p>
-<p>Idealizadora do projeto e do livro "Finanças sem Mistérios", voltado à educação financeira e à compreensão dos direitos do consumidor endividado.</p>
-<p>Membro da Comissão de Advocacia Colaborativa da OAB/PR.</p>
-<p>Autora de mais de 120 artigos jurídicos publicados no Jusbrasil.</p>
+<p>Idealizadora de projeto de educação financeira voltado à compreensão dos direitos do consumidor endividado.</p>
+<p>Membro de comissão temática da OAB.</p>
+<p>Autora de artigos jurídicos publicados em plataformas especializadas.</p>
 <div class="chips">
-<span class="chip">OAB/PR 124.188</span>
+<span class="chip">OAB/UF 00.000</span>
 <span class="chip">Pós-graduação em Direito Tributário</span>
 <span class="chip">Especialização em Direito Bancário</span>
 <span class="chip">Ciências Contábeis (em curso)</span>
-<span class="chip">Comissão de Advocacia Colaborativa</span>
-<span class="chip">Livro "Finanças sem Mistérios"</span>
-<span class="chip">120+ artigos no Jusbrasil</span>
+<span class="chip">Comissão temática da OAB</span>
+<span class="chip">Projeto de educação financeira</span>
+<span class="chip">Artigos jurídicos publicados</span>
 </div>
 </div>
 </div>
@@ -1629,24 +1640,24 @@ html { scroll-behavior: auto; }
 </div>
 <div class="glass stat glass-card reveal metal-card" id="metalCard">
 <div class="stat-value metal-value">R$ <span class="count" data-to="3.2" data-decimals="1" data-decimal-sep="," data-prefix="" data-suffix=" mi">3,2 mi</span><span class="mi-suffix">+</span></div>
-<div class="stat-label">em dívidas reduzidas para clientes</div>
+<div class="stat-label">em dívidas reduzidas</div>
 <div class="stat-caption">Somatório histórico<span class="footnote">Somatório histórico informado pelo escritório. Resultados anteriores não garantem resultados futuros.</span></div>
 </div>
 <div class="glass stat glass-card reveal">
 <div class="stat-value"><span class="count" data-to="100" data-suffix="%" data-decimals="0">100%</span></div>
-<div class="stat-label">atendimento online em todo o território nacional</div>
-<div class="stat-caption">Brasil inteiro</div>
+<div class="stat-label">atendimento online</div>
+<div class="stat-caption">Em todo o território nacional</div>
 </div>
 <div class="glass stat glass-card reveal">
-<div class="stat-value"><span class="count" data-to="24" data-decimals="0">24</span></div>
-<div class="stat-label">estados atendidos</div>
-<div class="stat-caption">Acompanhamento contínuo</div>
+<div class="stat-value"><span class="count" data-to="4" data-decimals="0">4</span></div>
+<div class="stat-label">etapas do processo</div>
+<div class="stat-caption">Do diagnóstico ao acompanhamento</div>
 </div>
 </div>
 <div class="glass testimonial reveal">
 <div class="quote-mark">“</div>
 <blockquote>Atendimento excepcional desde a primeira conversa. A clareza e a atenção me deram confiança para entregar meu caso.</blockquote>
-<cite>— Cliente, Curitiba/PR</cite>
+<cite>— Cliente, Cidade/UF</cite>
 </div>
 <p class="disclaimer reveal">Este site tem caráter exclusivamente informativo, em conformidade com o Código de Ética e Disciplina da OAB e com o Provimento nº 205/2021 do Conselho Federal da OAB. Não constitui oferta de serviços, promessa de resultado ou captação de clientela.</p>
 </div>
@@ -1748,22 +1759,21 @@ html { scroll-behavior: auto; }
 <h2>Vamos analisar o seu caso.</h2>
 <p class="lead">Envie sua situação e receba uma análise inicial gratuita do seu endividamento.</p>
 <div class="final-actions">
-<a class="btn-primary" href="https://wa.me/5541996632242" target="_blank" rel="noopener">Falar no WhatsApp — (41) 99663-2242</a>
-<a class="btn-glass" href="https://wa.me/554187591598" target="_blank" rel="noopener">Já sou cliente — canal exclusivo</a>
+<a class="btn-primary" href="https://wa.me/5500000000000" target="_blank" rel="noopener">Falar no WhatsApp — (00) 00000-0000</a>
 </div>
 </div>
 <div class="contact-grid">
 <div class="glass contact-item glass-card reveal">
 <div class="label">Telefone / WhatsApp</div>
-<div class="value">(41) 99663-2242</div>
+<div class="value">(00) 00000-0000</div>
 </div>
 <div class="glass contact-item glass-card reveal">
-<div class="label">Sede</div>
-<div class="value">R. Cândido Lopes, 146 — Centro, Curitiba/PR, 80020-060</div>
+<div class="label">Endereço</div>
+<div class="value">Rua Exemplo, 000 — Centro, Cidade/UF, 00000-000</div>
 </div>
 <div class="glass contact-item glass-card reveal">
 <div class="label">Instagram</div>
-<div class="value">@adv_baldo e @baldodellamea</div>
+<div class="value">@exemplo</div>
 </div>
 </div>
 </div>
@@ -1773,19 +1783,18 @@ html { scroll-behavior: auto; }
 
 <footer class="site-footer">
 <div class="footer-inner">
-<div class="footer-logo-wrap"><img src="logomarca.jpg" alt="Baldo &amp; Della Mea Advocacia" class="footer-logo"></div>
-<div style="margin-top:12px">Baldo &amp; Della Mea Advocacia · OAB/PR 124.188 · CNPJ 55.939.392/0001-40</div>
-<div>R. Cândido Lopes, 146 — Centro, Curitiba/PR, 80020-060</div>
+<div class="brand-lockup" style="margin-bottom:6px"><span class="brand-symbol" aria-hidden="true">VA</span><span class="brand-text"><span class="brand-name">Vértice Advocacia</span><span class="brand-sub">Advocacia</span></span></div>
+<div style="margin-top:12px">OAB/UF 00.000 · CNPJ 00.000.000/0001-00 · Rua Exemplo, 000 — Centro, Cidade/UF</div>
 <div class="footer-links">
-<a href="https://www.instagram.com/adv_baldo" target="_blank" rel="noopener">Instagram</a>
-<a href="https://www.tiktok.com/@adv_baldo" target="_blank" rel="noopener">TikTok</a>
+<a href="https://www.instagram.com/exemplo" target="_blank" rel="noopener">Instagram</a>
 </div>
-<div class="footer-note">© 2026 Baldo &amp; Della Mea Advocacia. Todos os direitos reservados.</div>
+<div class="footer-note">© 2026 Vértice Advocacia. Modelo de demonstração.</div>
 <div>Conteúdo informativo. Não constitui consulta jurídica nem promessa de resultado.</div>
 </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/5541996632242" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+<span class="site-badge">MODELO DE DEMONSTRAÇÃO</span>
+<a class="wa-float" href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
 <svg viewBox="0 0 24 24"><path d="M3 21l1.6-4.6A9 9 0 1 1 8 19.6z"/><path d="M9 10c0 2.2 1.8 4 4 4l1-1-1.5-1-.8.6c-.8-.4-1.4-1-1.8-1.8l.6-.8-1-1.5-1 1z"/></svg>
 </a>
 
